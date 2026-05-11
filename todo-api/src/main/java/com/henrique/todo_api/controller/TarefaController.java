@@ -2,12 +2,12 @@ package com.henrique.todo_api.controller;
 
 import com.henrique.todo_api.model.Tarefa;
 import com.henrique.todo_api.service.TarefaService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 @RestController
 @RequestMapping("/tarefas")
 public class TarefaController {
@@ -28,7 +28,7 @@ public class TarefaController {
     }
 
     @PostMapping
-    public Tarefa criar(@RequestBody Tarefa tarefa) {
+    public Tarefa criar(@Valid @RequestBody Tarefa tarefa) {
         return tarefaService.criar(tarefa);
     }
 
