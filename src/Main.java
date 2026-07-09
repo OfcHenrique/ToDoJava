@@ -1,13 +1,28 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import java.util.Scanner;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    int opcao = 0;
+    while (opcao != 3) {
+
+        System.out.println("1 - Adicionar Tarefa: ");
+        System.out.println("2 - Listar Tarefa: ");
+        System.out.println("3 - Sair: ");
+
+        opcao = sc.nextInt();
+
+        if ( opcao == 1 ) {
+            System.out.println("Adicionar Tarefa: ");
+
+        } else if ( opcao == 2 ) {
+            System.out.println("Listar Tarefa: ");
+
+        }else if ( opcao == 3 ) {
+            System.out.println("Sair: ");
+
+        } else {
+        System.out.println("Opção inválida!");
+    }
     }
 }
