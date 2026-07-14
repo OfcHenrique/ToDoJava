@@ -1,7 +1,8 @@
 import java.util.Scanner;
-
+import java.util.ArrayList;
 void main(String[] args) {
     Scanner sc = new Scanner(System.in);
+    ArrayList<String> tarefas = new ArrayList<>();
 
     int opcao = 0;
     while (opcao != 3) {
@@ -13,11 +14,15 @@ void main(String[] args) {
         opcao = sc.nextInt();
 
         if ( opcao == 1 ) {
-            System.out.println("Adicionar Tarefa: ");
+            sc.nextLine();
+            System.out.println("Digite o nome da Tarefa: ");
+            String nomeTarefa = sc.nextLine();
+            tarefas.add(nomeTarefa);
 
         } else if ( opcao == 2 ) {
-            System.out.println("Listar Tarefa: ");
-
+            for (String tarefa : tarefas) {
+                System.out.println("- " + tarefa);
+            }
         }else if ( opcao == 3 ) {
             System.out.println("Sair: ");
 
